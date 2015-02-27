@@ -82,7 +82,7 @@ class Parser
 
             $pos = strpos($content, $delimiter);
 
-            if (1 <= substr_count($content, $delimiter, $pos+strlen($delimiter))) {
+            if (1 <= substr_count($content, $delimiter, $pos + strlen($delimiter))) {
                 return $delimiter;
             }
         }
