@@ -102,7 +102,7 @@ class Parser
         return $this;
     }
 
-    public function guessBodyFormatFromHead($propertyPath)
+    public function guessBodyParserFromHead($propertyPath)
     {
         $this->bodyFormatPath = $propertyPath;
 
@@ -168,6 +168,12 @@ class Parser
         return new Frontmatter($head, $body);
     }
 
+    /**
+     * Add Parser
+     *
+     * @param  MetaParser $parser
+     * @return self
+     */
     public function addParser(MetaParser $parser)
     {
         $this->parsers[$parser->getName()] = $parser;
@@ -175,11 +181,23 @@ class Parser
         return $this;
     }
 
+    /**
+     * Has parser
+     *
+     * @param  string $name
+     * @return bool
+     */
     public function hasParser($name)
     {
         return array_key_exists($name, $this->parsers);
     }
 
+    /**
+     * Find a parser from its name or aliases
+     *
+     * @param  string $name
+     * @return Devster\Frontmatter\Parser\Parser
+     */
     public function findParser($name)
     {
         $meta = null;

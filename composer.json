@@ -16,9 +16,9 @@
         "symfony/property-access": "~2.6"
     },
     "suggest": {
-        "symfony/yaml": "Allows you to use native YAML parser",
-        "erusev/parsedown-extra": "Allows you to use native Markdown parser",
-        "seld/jsonlint": "Allows you to use native JSON parser"
+        "symfony/yaml": "Allows you to use built-in YAML parser",
+        "erusev/parsedown-extra": "Allows you to use built-in Markdown parser",
+        "seld/jsonlint": "Allows you to use built-in JSON parser"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.5",

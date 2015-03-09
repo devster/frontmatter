@@ -202,7 +202,7 @@ EOF;
 
         // Guess body format from head
         $p = new Parser('yaml', 'json');
-        $p->guessBodyFormatFromHead('[options][format]');
+        $p->guessBodyParserFromHead('[options][format]');
 
         $content = <<<EOF
 ---
@@ -295,7 +295,7 @@ EOF;
         );
 
         $p = new Parser('yaml');
-        $p->guessBodyFormatFromHead('[format]');
+        $p->guessBodyParserFromHead('[format]');
         $p->parse('--- format: something --- body');
     }
 }
